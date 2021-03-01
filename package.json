@@ -1,0 +1,34 @@
+{
+  "name": "book-list-project",
+  "version": "1.0.0",
+  "description": "Project to demostrate CRUD operation",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "nodemon src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arielor08/book-list-project.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Ariel Ortega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arielor08/book-list-project/issues"
+  },
+  "homepage": "https://github.com/arielor08/book-list-project#readme"
+}
