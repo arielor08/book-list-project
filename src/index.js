@@ -1,22 +1,26 @@
 const express = require('express');
 const { port } = require('./config/config');
 const db = require('./server');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 const Book = require('./models/book');
 const Author = require('./models/author');
 const BookAuthor = require('./models/book-author');
 
+//Call for all routes.
 const bookRoutes = require('./api/routes/books');
+const authorRoutes = require('./api/routes/author');
 
-app.use('/books', bookRoutes);
+app.use('/book', bookRoutes);
+app.use('/author', authorRoutes);
 
+//Relationship between tables
 Book.belongsToMany(Author, { through: BookAuthor });
 Author.belongsToMany(Book, { through: BookAuthor });
 
